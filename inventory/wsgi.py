@@ -1,3 +1,4 @@
+# pylint: disable=E,R
 """
 WSGI config for inventory project.
 

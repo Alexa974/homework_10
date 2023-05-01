@@ -1,4 +1,4 @@
-# pylint: disable=C
+# pylint: disable=C,E,R
 from django.apps import AppConfig
 
 

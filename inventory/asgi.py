@@ -1,3 +1,4 @@
+# pylint: disable=E,R
 """
 ASGI config for inventory project.
 

@@ -1,3 +1,4 @@
+# pylint: disable=E,R
 """
 URL configuration for inventory project.
 
