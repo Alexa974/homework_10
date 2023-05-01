@@ -1,7 +1,7 @@
 # pylint: disable=C
-from django.shortcuts import render
+from django.shortcuts import render  # pylint: disable=import-error
 # from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView  # pylint: disable=import-error
 from .models import Device, Card
 
 
@@ -11,15 +11,15 @@ def index_view(request):
     return render(request, "mainapp/index.html", {'cards': cards})
 
 
-class DeviceListView(ListView):
+class DeviceListView(ListView):  # pylint: disable=too-few-public-methods
     model = Device
 
 
-class DeviceDetailView(DetailView):
+class DeviceDetailView(DetailView):  # pylint: disable=too-few-public-methods
     model = Device
 
 
-class DeviceCreateVIew(CreateView):  # pylint: disable=too-many-ancestors
+class DeviceCreateVIew(CreateView):  # pylint: disable=too-few-public-methods
     model = Device
     fields = '__all__'
     success_url = '/device-list/'

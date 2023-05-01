@@ -1,6 +1,7 @@
-# pylint: disable=C, W
-from django.test import TestCase
+# pylint: disable=C,W
+from django.test import TestCase  # pylint: disable=import-error
 from .models import Device
+
 
 class TestDevice(TestCase):
 

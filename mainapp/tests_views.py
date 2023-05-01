@@ -1,6 +1,7 @@
-# pylint: disable=C, W
-from django.test import TestCase
+# pylint: disable=C,W
+from django.test import TestCase  # pylint: disable=import-error
 from .models import Device, User, Card
+
 
 class TestViews(TestCase):
 
@@ -31,5 +32,3 @@ class TestViews(TestCase):
 
         # print(response.content)
         # print(type(response.content))
-
-
