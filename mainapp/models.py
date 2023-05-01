@@ -1,3 +1,5 @@
+# pylint: disable=C
+
 from django.db import models
 
 
@@ -10,7 +12,7 @@ class Device(models.Model):
     serial = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.type
+        return self.type.__str__()
 
 
 class User(models.Model):
@@ -21,7 +23,7 @@ class User(models.Model):
     e_mail = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.last_name
+        return self.last_name.__str__()
 
 
 class Department(models.Model):
@@ -29,7 +31,7 @@ class Department(models.Model):
     name = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.name
+        return self.name.__str__()
 
 
 class Plant(models.Model):
@@ -37,7 +39,7 @@ class Plant(models.Model):
     name = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.name
+        return self.name.__str__()
 
 
 class Status(models.Model):
@@ -45,7 +47,7 @@ class Status(models.Model):
     name = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.name
+        return self.name.__str__()
 
 
 class Admin(models.Model):
@@ -55,15 +57,15 @@ class Admin(models.Model):
     e_mail = models.CharField(max_length=32, unique=True)
 
     def __str__(self):
-        return self.last_name
+        return self.last_name.__str__()
 
 
 def card_number():
     no = Card.objects.count()
     if no is None:
-        return f'Карточка №1'
-    else:
-        return f'Карточка № {no + 1}'
+        return "Карточка №1"
+    # else:
+    return "Карточка № {no + 1}"
 
 
 class Card(models.Model):
@@ -99,11 +101,7 @@ class Card(models.Model):
     date_change = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return self.title.__str__()
 
-    def count_device_types(self):
-        return self.device.count()
-
-
-
-
+    # def count_device_types(self):
+    #     return self.device.count()

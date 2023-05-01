@@ -1,3 +1,4 @@
+# pylint: disable=C
 from django.contrib import admin
 from.models import Card, Device, User, Department, Plant, Status, Admin
 

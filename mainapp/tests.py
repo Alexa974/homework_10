@@ -1,5 +1,6 @@
+# pylint: disable=C, W
 from django.test import TestCase
-from .models import Device, User, Card
+from .models import Device
 
 class TestDevice(TestCase):
 

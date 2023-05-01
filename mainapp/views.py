@@ -1,5 +1,6 @@
+# pylint: disable=C
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Device, Card
 
@@ -18,7 +19,7 @@ class DeviceDetailView(DetailView):
     model = Device
 
 
-class DeviceCreateVIew(CreateView):
+class DeviceCreateVIew(CreateView):  # pylint: disable=too-many-ancestors
     model = Device
     fields = '__all__'
     success_url = '/device-list/'
